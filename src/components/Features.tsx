@@ -2,28 +2,28 @@ import './Features.css';
 
 const features = [
   {
-    title: 'Online shop inside the app',
-    desc: 'Your online shop is built right into the app, making it easy for customers to browse, place orders, choose pick-up or delivery and pay while earning and using loyalty rewards along the way.',
+    title: 'Integrated online store within the app',
+    desc: 'Your store is seamlessly integrated into the app, allowing customers to easily explore products, place orders, select between pick-up or delivery, and make payments—all while earning and redeeming loyalty rewards.',
     img: '/oshop.jpg'
   },
   {
     title: 'Cash-back, points & tiers',
-    desc: 'Give customers a percentage back on every purchase as cashback stored in their wallet and let them collect points that unlock different tier levels based on total spend.',
+    desc: 'Reward customers with a percentage back on each purchase as cashback in their wallet, and allow them to accumulate points that unlock various tier levels based on their total spending.',
     img: '/cash.jpg'
   },
   {
-    title: 'Games',
-    desc: 'Use gamification features like scratch cards and quizzes to engage customers and reward them for interacting with your brand.',
+    title: 'Gamification',
+    desc: 'Incorporate interactive features like scratch cards and quizzes to engage customers and offer rewards for their interaction with your brand.',
     img: '/games.jpg'
   },
   {
-    title: 'Offers & campaigns',
-    desc: 'Create and send personalised offers and campaigns based on customer behaviour, segments or spend.',
+    title: 'Promotions & Campaigns',
+    desc: 'Design and deliver personalized offers and campaigns tailored to customer behavior, segments, or spending patterns.',
     img: '/offers.jpg'
   },
   {
     title: 'Push-notifications',
-    desc: 'Send push notifications directly to your customers’ phones even when locked. Share offers, event invites, and keep them engaged.',
+    desc: 'Deliver push notifications directly to your customers devices, even when their screen is locked. Keep them engaged by sharing offers, event invitations, and updates.',
     img: '/push.jpg'
   },
   {
@@ -38,7 +38,7 @@ const Features = () => (
     <h2 className="features-grid__title">Features that make a difference</h2>
     <div className="features-grid__container">
       {features.map((f, i) => (
-        <div className="features-grid__card" key={i}>
+        <div className="features-grid__card" key={i} data-aos="fade-up" data-aos-delay={i * 100}>
           <div className="features-grid__text">
             <h3>{f.title}</h3>
             <p>{f.desc}</p>

@@ -1,7 +1,7 @@
 import './UserInsights.css';
 
 const UserInsights = () => (
-  <section className="userinsights">
+  <section className="userinsights" data-aos="fade-up">
     <h2 className="userinsights__title">User insights</h2>
     <h3 className="userinsights__subtitle">Data and customer analytics that grow your business</h3>
     <p className="userinsights__desc">

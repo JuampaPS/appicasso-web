@@ -20,15 +20,24 @@ const integrations = [
 ];
 
 const IntegrationsCarousel = () => (
-  <section className="integrations">
+  <section className="integrations" data-aos="fade-up">
     <h2 className="integrations__title">Integrations</h2>
     <p className="integrations__desc">Plug into your existing setup.</p>
-    <div className="integrations__scroll">
-      {integrations.map((src, i) => (
-        <div className="integrations__logo" key={i}>
-          <img src={`/integrationspics/${src}`} alt={src.replace(/[-_.]/g, ' ').replace(/\..+$/, '')} />
-        </div>
-      ))}
+    <div className="integrations__carousel-container">
+      <div className="integrations__carousel">
+        {/* First set of logos */}
+        {integrations.map((src, i) => (
+          <div className="integrations__logo" key={`first-${i}`}>
+            <img src={`/integrationspics/${src}`} alt={src.replace(/[-_.]/g, ' ').replace(/\..+$/, '')} />
+          </div>
+        ))}
+        {/* Duplicate set for seamless loop */}
+        {integrations.map((src, i) => (
+          <div className="integrations__logo" key={`second-${i}`}>
+            <img src={`/integrationspics/${src}`} alt={src.replace(/[-_.]/g, ' ').replace(/\..+$/, '')} />
+          </div>
+        ))}
+      </div>
     </div>
   </section>
 );

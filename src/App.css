@@ -1,7 +1,56 @@
+body {
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  background: #fff7f0;
+  color: #222;
+  margin: 0;
+  padding: 0;
+}
+
+h1, .hero__title, .features-grid__title, .omnichannel-diagram__title, .userinsights__title, .brandshowcase__title, .integrations__title {
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  font-weight: 800;
+  font-size: 2.2rem;
+  letter-spacing: -1px;
+  margin-bottom: 1.2rem;
+}
+
+h2, .userinsights__subtitle {
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+h3, .features-grid__text h3 {
+  font-weight: 600;
+  font-size: 1.15rem;
+  margin-bottom: 0.7rem;
+}
+
+p, .hero__desc, .features-grid__text p, .userinsights__desc, .brandshowcase__desc, .integrations__desc {
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: #444;
+  line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+  h1, .hero__title, .features-grid__title, .omnichannel-diagram__title, .userinsights__title, .brandshowcase__title, .integrations__title {
+    font-size: 1.3rem;
+  }
+  h2, .userinsights__subtitle {
+    font-size: 1.05rem;
+  }
+  h3, .features-grid__text h3 {
+    font-size: 0.97rem;
+  }
+  p, .hero__desc, .features-grid__text p, .userinsights__desc, .brandshowcase__desc, .integrations__desc {
+    font-size: 0.97rem;
+  }
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
 }
 

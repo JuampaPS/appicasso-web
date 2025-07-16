@@ -2,10 +2,12 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 3rem 2rem 2rem 2rem;
-  background: #fff7f0;
+  padding: 3.5rem 2rem 2.5rem 2rem;
+  background: linear-gradient(120deg, #fff7f0 60%, #ffe0c2 100%, #ffb347 120%);
   min-height: 60vh;
   gap: 2rem;
+  border-radius: 0 0 48px 48px;
+  box-shadow: 0 8px 32px rgba(255,115,0,0.07);
 }
 
 .hero__content {
@@ -14,6 +16,10 @@
   flex-direction: column;
   justify-content: center;
   max-width: 500px;
+  background: rgba(255,255,255,0.92);
+  border-radius: 32px;
+  padding: 2.2rem 1.5rem;
+  box-shadow: 0 2px 16px rgba(255,179,71,0.07);
 }
 
 .hero__title {
@@ -30,20 +36,29 @@
 }
 
 .hero__cta {
-  background: #ff7300;
+  background: linear-gradient(90deg, #ff7300 60%, #ffb347 100%);
   color: #fff;
   border: none;
-  border-radius: 24px;
-  padding: 1rem 2.5rem;
-  font-size: 1.1rem;
+  border-radius: 32px;
+  padding: 1.1rem 3.2rem 1.1rem 2.2rem;
+  font-size: 1.18rem;
   font-weight: 700;
   cursor: pointer;
-  box-shadow: 0 2px 8px rgba(255,115,0,0.08);
-  transition: background 0.2s;
+  box-shadow: 0 4px 16px rgba(255,115,0,0.13);
+  transition: background 0.2s, transform 0.18s, box-shadow 0.18s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
 }
-
 .hero__cta:hover {
-  background: #ff9100;
+  background: linear-gradient(90deg, #ff9100 60%, #ffd580 100%);
+  transform: translateY(-4px) scale(1.04);
+  box-shadow: 0 8px 32px rgba(255,115,0,0.18);
+}
+.hero__cta .cta-icon {
+  display: inline-block;
+  font-size: 1.3em;
+  margin-left: 0.2em;
 }
 
 .hero__image {
@@ -51,6 +66,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  min-width: 0;
 }
 
 .hero__image img {
@@ -59,6 +75,8 @@
   border-radius: 32px;
   box-shadow: 0 4px 24px rgba(255,115,0,0.10);
   object-fit: cover;
+  display: block;
+  background: #fff;
 }
 
 @media (max-width: 900px) {
@@ -66,6 +84,7 @@
     flex-direction: column;
     padding: 2rem 1rem;
     min-height: 50vh;
+    border-radius: 0 0 32px 32px;
   }
   .hero__image img {
     max-width: 100%;
@@ -75,5 +94,23 @@
     max-width: 100%;
     align-items: center;
     text-align: center;
+    padding: 1.5rem 0.7rem;
+  }
+}
+@media (max-width: 600px) {
+  .hero {
+    padding: 1.2rem 0.3rem;
+    gap: 1rem;
+    border-radius: 0 0 16px 16px;
+  }
+  .hero__title {
+    font-size: 1.3rem;
+  }
+  .hero__desc {
+    font-size: 0.97rem;
+  }
+  .hero__cta {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.97rem;
   }
 } 

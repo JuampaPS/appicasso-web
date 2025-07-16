@@ -1,7 +1,7 @@
 import './BrandShowcase.css';
 
 const BrandShowcase = () => (
-  <section className="brandshowcase">
+  <section className="brandshowcase" data-aos="fade-up">
     <h2 className="brandshowcase__title">Your brand, your app!</h2>
     <p className="brandshowcase__desc">Customize your own white-label app. Tap a logo to see how brands make it their own!</p>
     <div className="brandshowcase__img-wrapper">

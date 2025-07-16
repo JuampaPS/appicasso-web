@@ -2,6 +2,7 @@
   background: #fff;
   padding: 3rem 2rem;
   text-align: center;
+  overflow: hidden;
 }
 
 .integrations__title {
@@ -17,31 +18,29 @@
   margin-bottom: 2rem;
 }
 
-.integrations__grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 1.5rem;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.integrations__item img {
+.integrations__carousel-container {
   width: 100%;
-  border-radius: 16px;
-  background: #ffe0c2;
-  object-fit: contain;
-  min-height: 60px;
-  max-height: 80px;
+  overflow: hidden;
+  position: relative;
+  padding: 1.5rem 0;
 }
 
-.integrations__scroll {
+.integrations__carousel {
   display: flex;
   gap: 2.5rem;
-  overflow-x: auto;
-  padding: 1.5rem 0.5rem 1.5rem 0.5rem;
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
+  animation: scroll 30s linear infinite;
+  width: max-content;
 }
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
 .integrations__logo {
   flex: 0 0 auto;
   display: flex;
@@ -54,13 +53,21 @@
   border-radius: 16px;
   box-shadow: 0 2px 8px rgba(255,115,0,0.06);
   padding: 0.7rem 1.2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.integrations__logo:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(255,115,0,0.15);
+}
+
 .integrations__logo img {
   max-width: 100%;
   max-height: 48px;
   object-fit: contain;
   display: block;
 }
+
 @media (max-width: 600px) {
   .integrations__logo {
     min-width: 70px;
@@ -70,5 +77,8 @@
   }
   .integrations__logo img {
     max-height: 32px;
+  }
+  .integrations__carousel {
+    gap: 1rem;
   }
 } 
