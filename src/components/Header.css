@@ -1,0 +1,46 @@
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 2rem;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header__logo img {
+  display: block;
+  height: 80px;
+}
+
+.header__cta {
+  background: #ff7300;
+  color: #fff;
+  border: none;
+  border-radius: 24px;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.header__cta:hover {
+  background: #ff9100;
+}
+
+@media (max-width: 600px) {
+  .header__logo img {
+    height: 56px;
+  }
+  .header {
+    padding: 0.7rem 1rem;
+  }
+  .header__cta {
+    padding: 0.5rem 1.2rem;
+    font-size: 0.95rem;
+  }
+} 

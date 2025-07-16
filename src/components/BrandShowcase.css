@@ -1,0 +1,49 @@
+.brandshowcase {
+  background: #fff7f0;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.brandshowcase__title {
+  color: #ff7300;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.brandshowcase__desc {
+  color: #333;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.brandshowcase__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.brandshowcase__item img {
+  width: 100%;
+  border-radius: 24px;
+  box-shadow: 0 4px 24px rgba(255,115,0,0.10);
+  background: #ffe0c2;
+  object-fit: cover;
+  min-height: 120px;
+}
+
+.brandshowcase__img-wrapper {
+  width: 100%;
+  max-width: 700px;
+  margin: 2.5rem auto 0 auto;
+  display: flex;
+  justify-content: center;
+}
+.brandshowcase__img {
+  width: 100%;
+  height: auto;
+  border-radius: 24px;
+  box-shadow: 0 4px 24px rgba(255,115,0,0.10);
+} 
