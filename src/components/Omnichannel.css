@@ -241,11 +241,21 @@
 
 @media (max-width: 600px) {
   .omnichannel-diagram {
-    padding: 1.5rem 0.2rem;
-    min-height: 700px;
+    background: #fff;
+    padding: 1.2rem 0.2rem 1.2rem 0.2rem;
+    min-height: unset;
   }
-  .omnichannel-diagram__container {
-    min-height: 600px;
+  .omnichannel-diagram__title {
+    font-size: 1.1rem;
+    margin-bottom: 1.1rem;
+  }
+  .omnichannel-diagram__img-wrapper {
+    margin-bottom: 1.2rem;
+  }
+  .omnichannel-diagram__img {
+    max-width: 90vw;
+    max-height: 180px;
+    border-radius: 14px;
   }
   .omnichannel-diagram__device {
     width: 90px;
