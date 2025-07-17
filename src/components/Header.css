@@ -71,10 +71,17 @@
 
 @media (max-width: 600px) {
   .header {
-    padding: 1rem 1rem;
-    margin: 0 1rem;
-    border-radius: 16px;
-    margin-top: 0.5rem;
+    width: 100vw;
+    max-width: none;
+    margin: 0;
+    border-radius: 0;
+    left: 0;
+    right: 0;
+    position: sticky;
+    background: #fff;
+    padding: 1rem 0.7rem;
+    box-sizing: border-box;
+    z-index: 100;
   }
   .header__logo img {
     height: 50px;

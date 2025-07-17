@@ -34,6 +34,13 @@ p, .hero__desc, .features-grid__text p, .userinsights__desc, .brandshowcase__des
 }
 
 @media (max-width: 600px) {
+  #root {
+    width: 100vw;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
   h1, .hero__title, .features-grid__title, .omnichannel-diagram__title, .userinsights__title, .brandshowcase__title, .integrations__title {
     font-size: 1.3rem;
   }
