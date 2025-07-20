@@ -1,8 +1,4 @@
 import './Features.css';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/pagination';
 
 const features = [
   {
@@ -40,8 +36,7 @@ const features = [
 const Features = () => (
   <section className="features-grid">
     <h2 className="features-grid__title">Features that make a difference</h2>
-    {/* Carrusel en móvil, grid en desktop */}
-    <div className="features-grid__container features-grid__container--desktop">
+    <div className="features-grid__container">
       {features.map((f, i) => (
         <div className="features-grid__card" key={i} data-aos="fade-up" data-aos-delay={i * 100}>
           <div className="features-grid__text">
@@ -53,29 +48,6 @@ const Features = () => (
           </div>
         </div>
       ))}
-    </div>
-    <div className="features-grid__container features-grid__container--mobile">
-      <Swiper
-        modules={[Pagination]}
-        pagination={{ clickable: true }}
-        spaceBetween={24}
-        slidesPerView={1}
-        className="features-swiper"
-      >
-        {features.map((f, i) => (
-          <SwiperSlide key={i}>
-            <div className="features-grid__card" data-aos="fade-up">
-              <div className="features-grid__text">
-                <h3>{f.title}</h3>
-                <p>{f.desc}</p>
-              </div>
-              <div className="features-grid__img">
-                <img src={f.img} alt={f.title} />
-              </div>
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
     </div>
   </section>
 );
